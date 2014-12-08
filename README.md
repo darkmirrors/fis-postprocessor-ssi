@@ -12,7 +12,7 @@
 
 配置
 
-	//可以自己设置include的正则
+	//可以自定义include的正则，如果不需要自定义的话，则忽略这些配置则可
 	fis.config.merge({
         settings :{
             postprocessor : {
