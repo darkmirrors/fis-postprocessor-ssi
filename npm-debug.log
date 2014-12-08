@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', '.' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/darkmirrors/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package.tgz
+12 verbose folder .
+13 info prepublish fis-postprocessor-ssi@0.0.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/darkmirrors/.npm/1f1177db-tar.lock
+16 silly lockFile cba378e1-tprocessor-ssi-0-0-1-package-tgz tar:///Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package.tgz
+17 verbose lock tar:///Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package.tgz /Users/darkmirrors/.npm/cba378e1-tprocessor-ssi-0-0-1-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile cba378e1-tprocessor-ssi-0-0-1-package-tgz tar:///Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package.tgz
+21 silly lockFile cba378e1-tprocessor-ssi-0-0-1-package-tgz tar:///Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package.tgz
+22 silly lockFile d868c462--postprocessor-ssi-0-0-1-package /Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package
+23 verbose lock /Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package /Users/darkmirrors/.npm/d868c462--postprocessor-ssi-0-0-1-package.lock
+24 silly lockFile d868c462--postprocessor-ssi-0-0-1-package /Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package
+25 silly lockFile d868c462--postprocessor-ssi-0-0-1-package /Users/darkmirrors/.npm/fis-postprocessor-ssi/0.0.1/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'fis-postprocessor-ssi',
+28 silly publish   description: 'Include ssi files to the html、css、js',
+28 silly publish   version: '0.0.1',
+28 silly publish   author: { name: 'darkmirrors', email: 'darkmirrors@163.com' },
+28 silly publish   homepage: 'http://darkmirrors.github.io',
+28 silly publish   repository:
+28 silly publish    { type: 'git',
+28 silly publish      url: 'https://github.com/darkmirrors/fis-postprocessor-ssi' },
+28 silly publish   keywords: [ 'fis', 'include', 'ssi' ],
+28 silly publish   main: 'index.js',
+28 silly publish   engines: { node: '>= 0.8.0' },
+28 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+28 silly publish   license: 'MIT',
+28 silly publish   bugs: { url: 'https://github.com/darkmirrors/fis-postprocessor-ssi/issues' },
+28 silly publish   readme: '# fis-postporcessor-ssi \n\n## 说明\n\n由于项目中有用到apache 自带的ssi功能，所以需要将`<!--#include virtual="block/reset.css"-->`引入的内容内嵌进html中。grunt 那边也有一个类似的ssi插件，顾自己写了一个。\n\n## 使用\n\n先安装\n\n> npm install -g fis-postprocessor-ssi\n\n配置\n\n\t//可以自己设置include的正则\n\tfis.config.merge({\n        settings :{\n            postprocessor : {\n                \'ssi\' : {\n                    reg : /<!--#include\\svirtual="([^"]+)"\\s*-->/gim\n                }\n            }\n        }\n    });\n    \n\t//设置解析后内嵌的\n\tfis.config.merge({\n    \tmodules :{\n        \tpostprocessor : {\n            \thtml : \'ssi\',\n            \tcss : \'ssi\',\n            \tjs : \'ssi\'\n        \t}\n    \t}\n\t});\n',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   _id: 'fis-postprocessor-ssi@0.0.1',
+28 silly publish   _shasum: '1db37421152b1c9adafe027abb9ecbbd2fe3eed4',
+28 silly publish   _from: '.' }
+29 verbose request where is /fis-postprocessor-ssi
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id af283d839d267749
+32 verbose url raw /fis-postprocessor-ssi
+33 verbose url resolving [ 'https://registry.npmjs.org/', './fis-postprocessor-ssi' ]
+34 verbose url resolved https://registry.npmjs.org/fis-postprocessor-ssi
+35 verbose request where is https://registry.npmjs.org/fis-postprocessor-ssi
+36 info trying registry request attempt 1 at 14:12:18
+37 http PUT https://registry.npmjs.org/fis-postprocessor-ssi
+38 http 403 https://registry.npmjs.org/fis-postprocessor-ssi
+39 verbose headers { date: 'Mon, 08 Dec 2014 06:12:20 GMT',
+39 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+39 verbose headers   'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=60',
+39 verbose headers   'content-length': '3356',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   'x-served-by': 'cache-ty66-TYO',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1418019140.202818,VS0,VE448',
+39 verbose headers   'keep-alive': 'timeout=10, max=50',
+39 verbose headers   connection: 'Keep-Alive' }
+40 error publish Failed PUT 403
+41 error Error: forbidden cannot modify pre-existing version: 0.0.1
+41 error old={"name":"fis-postprocessor-ssi","description":"Include ssi files to the html、css、js","version":"0.0.1","author":{"name":"darkmirrors","email":"darkmirrors@163.com"},"homepage":"http://darkmirrors.github.io","repository":{"type":"git","url":"https://github.com/darkmirrors/fis-postprocessor-ssi"},"keywords":["fis","include","ssi"],"main":"index.js","engines":{"node":">= 0.8.0"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"license":"MIT","bugs":{"url":"https://github.com/darkmirrors/fis-postprocessor-ssi/issues"},"_id":"fis-postprocessor-ssi@0.0.1","_shasum":"9132823487bb70c52860ee4c471dd39c0f2ef715","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"darkmirrors","email":"darkmirrors@163.com"},"maintainers":[{"name":"darkmirrors","email":"darkmirrors@163.com"}],"dist":{"shasum":"9132823487bb70c52860ee4c471dd39c0f2ef715","tarball":"http://registry.npmjs.org/fis-postprocessor-ssi/-/fis-postprocessor-ssi-0.0.1.tgz"}}
+41 error new={"name":"fis-postprocessor-ssi","description":"Include ssi files to the html、css、js","version":"0.0.1","author":{"name":"darkmirrors","email":"darkmirrors@163.com"},"homepage":"http://darkmirrors.github.io","repository":{"type":"git","url":"https://github.com/darkmirrors/fis-postprocessor-ssi"},"keywords":["fis","include","ssi"],"main":"index.js","engines":{"node":">= 0.8.0"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"license":"MIT","bugs":{"url":"https://github.com/darkmirrors/fis-postprocessor-ssi/issues"},"readme":"# fis-postporcessor-ssi \u000a\u000a## 说明\u000a\u000a由于项目中有用到apache 自带的ssi功能，所以需要将`<!--#include virtual=\"block/reset.css\"-->`引入的内容内嵌进html中。grunt 那边也有一个类似的ssi插件，顾自己写了一个。\u000a\u000a## 使用\u000a\u000a先安装\u000a\u000a> npm install -g fis-postprocessor-ssi\u000a\u000a配置\u000a\u000a\u0009//可以自己设置include的正则\u000a\u0009fis.config.merge({\u000a        settings :{\u000a            postprocessor : {\u000a                'ssi' : {\u000a                    reg : /<!--#include\\svirtual=\"([^\"]+)\"\\s*-->/gim\u000a                }\u000a            }\u000a        }\u000a    });\u000a    \u000a\u0009//设置解析后内嵌的\u000a\u0009fis.config.merge({\u000a    \u0009modules :{\u000a        \u0009postprocessor : {\u000a            \u0009html : 'ssi',\u000a            \u0009css : 'ssi',\u000a            \u0009js : 'ssi'\u000a        \u0009}\u000a    \u0009}\u000a\u0009});\u000a","readmeFilename":"README.md","_id":"fis-postprocessor-ssi@0.0.1","_shasum":"1db37421152b1c9adafe027abb9ecbbd2fe3eed4","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"darkmirrors","email":"darkmirrors@163.com"},"maintainers":[{"name":"darkmirrors","email":"darkmirrors@163.com"}],"dist":{"shasum":"1db37421152b1c9adafe027abb9ecbbd2fe3eed4","tarball":"http://registry.npmjs.org/fis-postprocessor-ssi/-/fis-postprocessor-ssi-0.0.1.tgz"}}: fis-postprocessor-ssi
+41 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+41 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+41 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
+41 error     at Request.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+41 error     at Request.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+41 error     at IncomingMessage.emit (events.js:117:20)
+41 error     at _stream_readable.js:943:16
+41 error     at process._tickCallback (node.js:419:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Darwin 14.0.0
+44 error command "node" "/usr/local/bin/npm" "publish" "."
+45 error cwd /Users/darkmirrors/github/fis-postprocessor-ssi
+46 error node -v v0.10.33
+47 error npm -v 1.4.28
+48 verbose exit [ 1, true ]
