@@ -2,7 +2,7 @@
 
 ## 说明
 
-由于项目中有用到apache 自带的ssi功能，所以需要将`<!--#include virtual="block/reset.css"-->`引入的内容内嵌进html中。grunt 那边也有一个类似的ssi插件，顾自己写了一个。
+由于项目中有用到apache 自带的ssi功能，所以需要将`<!--#include virtual="path/to/file(.css|js|html)"-->`引入的内容内嵌进html中。
 
 ## 使用
 
@@ -23,7 +23,7 @@
         }
     });
     
-	//设置解析后内嵌的
+    //设置文件处理类型
 	fis.config.merge({
     	modules :{
         	postprocessor : {
