@@ -1,7 +1,7 @@
 {
   "name": "fis-postprocessor-ssi",
   "description": "Include ssi files to the html、css、js",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": "darkmirrors <darkmirrors@163.com>",
   "homepage": "http://darkmirrors.github.io",
   "repository": {
