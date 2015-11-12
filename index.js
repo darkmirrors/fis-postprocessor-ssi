@@ -9,8 +9,8 @@ function addDeps(a, b){
     }
 }
 
-module.exports = function(content, file, conf) {
-    var fileReg = conf.reg || /<!--#include\svirtual="([^"]+)"\s*-->/gim;
+module.exports = function(content, file, options) {
+    var fileReg = options.reg;
 
     content = content.replace(fileReg, function(ret, src) {
         var path = file.getUrl(true, false).match(/(\/*\w+\/+)*/);
@@ -19,7 +19,8 @@ module.exports = function(content, file, conf) {
             src = fis.project.getProjectPath() + '/' + path[0] + src;
 
             if (fis.util.isFile(src)) {
-                var tpl = fis.file.wrap(src);
+                var tpl = fis.file(src);
+                fis.compile(tpl);
 
                 addDeps(file, tpl);
 
@@ -31,3 +32,7 @@ module.exports = function(content, file, conf) {
 
     return content;
 };
+
+module.exports.options = {
+	reg : /<!--#include\s(?:virtual|file)="([^"]+)"\s*-->/gim
+}
